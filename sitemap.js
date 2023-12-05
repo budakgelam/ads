@@ -216,8 +216,8 @@ function displayToc(filter) {
    if (numDisplayed == postTitle.length) {
       var tocNote = '<span class="toc-note">Show All ' + postTitle.length + ' Video Title<br/><br/></span>'; }
    else {
-      var tocNote = '<span class="toc-note">Hiển thị ' + numDisplayed + ' bài viết có nhãn \'';
-      tocNote += postFilter + '\' trong tổng số '+ postTitle.length + ' bài viết<br/><br/></span>';
+      var tocNote = '<span class="toc-note">Show ' + numDisplayed + ' Videos with labels \'';
+      tocNote += postFilter + '\' in total '+ postTitle.length + ' video<br/><br/></span>';
    }
    tocdiv.innerHTML = tocNote + tocTable;
 } // end of displayToc
@@ -249,5 +249,5 @@ function hideToc() {
   var tocdiv = document.getElementById("toc");
   tocdiv.innerHTML = '';
   var toclink = document.getElementById("toclink");
-  toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">» Hiển thị mục lục</a> <img src="https://3.bp.blogspot.com/-OJVzWx2-ubY/Wxga_uZJTTI/AAAAAAAALlY/O3SvsrILwRMUSam-7hqH1TxevLrWJr_GACLcBGAs/s1600/new_1.gif"/>';
+  toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">» Show table of contents</a> <img src="https://3.bp.blogspot.com/-OJVzWx2-ubY/Wxga_uZJTTI/AAAAAAAALlY/O3SvsrILwRMUSam-7hqH1TxevLrWJr_GACLcBGAs/s1600/new_1.gif"/>';
 }
