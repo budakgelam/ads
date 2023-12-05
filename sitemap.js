@@ -214,7 +214,7 @@ function displayToc(filter) {
    }
    tocTable += '</table>';
    if (numDisplayed == postTitle.length) {
-      var tocNote = '<span class="toc-note">Hiển thị tất cả ' + postTitle.length + ' bài viết<br/><br/></span>'; }
+      var tocNote = '<span class="toc-note">Show All ' + postTitle.length + ' Video Title<br/><br/></span>'; }
    else {
       var tocNote = '<span class="toc-note">Hiển thị ' + numDisplayed + ' bài viết có nhãn \'';
       tocNote += postFilter + '\' trong tổng số '+ postTitle.length + ' bài viết<br/><br/></span>';
