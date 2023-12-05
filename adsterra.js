@@ -1,5 +1,5 @@
 window.onload = function() {
-  var puURL = 'https://facebook.com';
+  var puURL = 'https://www.toprevenuegate.com/e2f23hjf2?key=d48a82a8f874452ba9976cdf2cb6478b';
   var puTS = Math.round(+new Date()/1000);
   console.log('T.'+localStorage.puTS+'/'+puTS);
   if (typeof localStorage.puTS == 'undefined' || parseInt(localStorage.puTS) <= (puTS - 30)) {
