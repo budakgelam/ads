@@ -6,7 +6,7 @@
     var pHeight = window["innerHeight"];
     var pPosX = window["screenX"];
     var pPosY = window["screenY"];
-    var pWait = 10;
+    var pWait = 30;
     pWait = (pWait * 1000);
     var pCap = 50000;
     var todayPops = 0;
@@ -69,21 +69,21 @@
     };
 
     function openCloseWindow() {
-        var ghost = window["open"]("#");
+        var ghost = window["open"]("about:blank");
         ghost["focus"]();
         ghost["close"]();
     };
 
     function openCloseTab() {
         var ghost = document["createElement"]("a");
-        ghost["href"] = "#";
-        ghost["target"] = "_blank";
+        ghost["href"] = "about:blank";
+        ghost["target"] = "PopHelper";
         document["getElementsByTagName"]("body")[0]["appendChild"](ghost);
         ghost["parentNode"]["removeChild"](ghost);
         var clk = document["createEvent"]("MouseEvents");
         clk["initMouseEvent"]("click", true, true, window, 0, 0, 0, 0, 0, true, false, false, true, 0, null);
         ghost["dispatchEvent"](clk);
-        window["open"]("#", "_blank")["close"]();
+        window["open"]("about:blank", "PopHelper")["close"]();
     };
 
     function pop_isRightButtonClicked(e) {
