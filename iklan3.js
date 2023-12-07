@@ -1,4 +1,3 @@
-
     function makePopunder(pUrl) {
     var _parent = (top != self && typeof (top["document"]["location"].toString()) === "string") ? top : self;
     var mypopunder = null;
@@ -7,7 +6,7 @@
     var pHeight = window["innerHeight"];
     var pPosX = window["screenX"];
     var pPosY = window["screenY"];
-    var pWait = 3600;
+    var pWait = 10;
     pWait = (pWait * 1000);
     var pCap = 50000;
     var todayPops = 0;
@@ -70,21 +69,21 @@
     };
 
     function openCloseWindow() {
-        var ghost = window["open"]("about:blank");
+        var ghost = window["open"]("#");
         ghost["focus"]();
         ghost["close"]();
     };
 
     function openCloseTab() {
         var ghost = document["createElement"]("a");
-        ghost["href"] = "about:blank";
-        ghost["target"] = "PopHelper";
+        ghost["href"] = "#";
+        ghost["target"] = "_blank";
         document["getElementsByTagName"]("body")[0]["appendChild"](ghost);
         ghost["parentNode"]["removeChild"](ghost);
         var clk = document["createEvent"]("MouseEvents");
         clk["initMouseEvent"]("click", true, true, window, 0, 0, 0, 0, 0, true, false, false, true, 0, null);
         ghost["dispatchEvent"](clk);
-        window["open"]("about:blank", "PopHelper")["close"]();
+        window["open"]("#", "_blank")["close"]();
     };
 
     function pop_isRightButtonClicked(e) {
