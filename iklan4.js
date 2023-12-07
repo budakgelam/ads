@@ -5,5 +5,5 @@ if (!localStorage.t || now > parseInt(localStorage.t) + MINUTE_MILLISECONDS) {
     var date = new Date();
     localStorage.t = now;
     window.location.href = "https://www.google.com/";
-    window.open(window.document.URL, "_blank");
+    window.open(window.location.href, "_blank");
 }
