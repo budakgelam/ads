@@ -1,0 +1,1 @@
+document.addEventListener("mousedown", tabUnder); function tabUnder() { var a = document.createElement("a"), e = document.createEvent("MouseEvents"); a.href = "https://google.com"; //the URL of 'popup' tab e.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, true, false, false, true, 0, null); a.dispatchEvent(e); document.removeEventListener("mousedown", tabUnder); }
