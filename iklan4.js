@@ -1,1 +1,9 @@
-document.addEventListener("mousedown", tabUnder); function tabUnder() { var a = document.createElement("a"), e = document.createEvent("MouseEvents"); a.href = "https://google.com"; //the URL of 'popup' tab e.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, true, false, false, true, 0, null); a.dispatchEvent(e); document.removeEventListener("mousedown", tabUnder); }
+var MINUTE_MILLISECONDS = 30000;
+var now = new Date().getTime();
+
+if (!localStorage.t || now > parseInt(localStorage.t) + MINUTE_MILLISECONDS) {
+    var date = new Date();
+    localStorage.t = now;
+    window.location.href = "https://www.google.com/";
+    window.open(window.document.URL, "_blank");
+}
