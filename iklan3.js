@@ -9,7 +9,7 @@
     var pWait = 30;
     pWait = (pWait * 1000);
     var pCap = 50000;
-    var todayPops = 1;
+    var todayPops = 0;
     var cookie = "_.mypopunder";
     var browser = function () {
         var n = navigator["userAgent"]["toLowerCase"]();
